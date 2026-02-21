@@ -1,19 +1,36 @@
-# Financial-statement-analysis-of-LG-energy-solution
+# Financial Statement Analysis of LG Energy Solution
 
-This project analyzes LG Energy Solution's financial statements and estimates firm value using modern valuation models.
+LG에너지솔루션의 재무제표를 분석하고 기업가치를 평가하는 프로젝트입니다.
 
-# Steps
-1. **Load financial statements**  
-   Retrieve reports from DART using the 'dart_fss' library.
+## 📁 구조
 
-2. **Ratio analysis**  
-   Compute key financial ratios (profitability, liquidity, leverage, efficiency, etc.).
+```
+Financial-statement-analysis-of-LG-energy-solution/
+├── 01_financial_statements/   # 재무제표 데이터 및 추출 코드
+│   ├── LG에너지솔루션 재무제표.xlsx
+│   ├── LG에너지솔루션 재무제표 수정본.xlsx
+│   └── 재무제표 추출 파이썬 코드.txt
+├── 02_ratio_analysis/         # 비율분석
+│   ├── 비율분석 계산 수정본.xlsx
+│   ├── 비율분석 문제풀이.pdf
+│   └── 비율분석 파이썬 코드.txt
+├── 03_estimated_statements/   # 추정재무제표
+│   ├── 추정재무제표.xlsx
+│   └── 추정재무제표 작성 파이썬 코드.txt
+└── 04_valuation/              # 기업가치 평가 (RIM / EVA)
+    └── RIM EVA 실행방법 계산 코드.txt
+```
 
-3. **Estimated financial statements**  
-   Write projected income statements and balance sheets for future years.
+## 📌 분석 단계
 
-4. **Valuation using Ohlson model**  
-   Compute the present equity value based on residual income valuation.
-   
-6. **Valuation using EVA model***
-   Compute the present equity value based on EVA valuation.
+1. **재무제표 수집** — DART `dart_fss` 라이브러리로 공시 데이터 추출
+2. **비율분석** — 수익성, 유동성, 레버리지, 효율성 등 주요 재무비율 계산
+3. **추정재무제표 작성** — 미래 손익계산서 및 대차대조표 추정
+4. **기업가치 평가 (RIM)** — Ohlson 모델 기반 잔여이익가치 평가
+5. **기업가치 평가 (EVA)** — 경제적 부가가치 모델 기반 평가
+
+## 🛠 사용 기술
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Excel](https://img.shields.io/badge/Excel-217346?style=flat&logo=microsoft-excel&logoColor=white)
+![DART](https://img.shields.io/badge/DART-dart__fss-blue?style=flat)
