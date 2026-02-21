@@ -1,36 +1,46 @@
 # Financial Statement Analysis of LG Energy Solution
 
-LG에너지솔루션의 재무제표를 분석하고 기업가치를 추정하는 프로젝트입니다.
+A project analyzing LG Energy Solution's financial statements and estimating firm value using modern valuation models (RIM & EVA).
 
-## 구조
+## 📁 Project Structure
 
 ```
 Financial-statement-analysis-of-LG-energy-solution/
-├── 01_financial_statements/        # 재무제표 데이터 및 추출 코드
-│   ├── LG에너지솔루션_재무제표.xlsx
-│   ├── LG에너지솔루션_재무제표_수정본.xlsx
-│   └── 재무제표_추출.py
-├── 02_ratio_analysis/              # 재무비율 분석
-│   ├── 비율분석_계산_수정본.xlsx
-│   ├── 비율분석_문제풀이.pdf
-│   └── 비율분석.py
-├── 03_estimated_statements/        # 추정재무제표
-│   ├── 추정재무제표.xlsx
-│   └── 추정재무제표_작성.py
-└── 04_valuation/                   # 기업가치 평가
-    └── RIM_EVA_계산.py
+├── 01_financial_statements/
+│   ├── financial_statements.xlsx           # Raw financial statement data
+│   ├── financial_statements_revised.xlsx   # Cleaned & revised version
+│   └── extract_financial_data.py           # DART API data extraction script
+├── 02_ratio_analysis/
+│   ├── ratio_analysis_revised.xlsx         # Computed financial ratios
+│   ├── ratio_analysis_solutions.pdf        # Ratio analysis problem solutions
+│   └── ratio_analysis.py                   # Ratio calculation script
+├── 03_estimated_statements/
+│   ├── estimated_financial_statements.xlsx # Projected income statement & balance sheet
+│   └── build_estimated_statements.py       # Script to build projected statements
+└── 04_valuation/
+    └── rim_eva_valuation.py                # RIM & EVA firm valuation models
 ```
 
-## 분석 단계
+## 📌 Analysis Pipeline
 
-1. **재무제표 수집** — DART `dart_fss` 라이브러리로 공시 데이터 추출
-2. **비율 분석** — 수익성, 유동성, 레버리지, 효율성 지표 계산
-3. **추정재무제표 작성** — 미래 손익계산서 및 재무상태표 추정
-4. **기업가치 평가 (RIM)** — Ohlson 잔여이익 모델 기반 주주가치 산출
-5. **기업가치 평가 (EVA)** — 경제적 부가가치 모델 기반 주주가치 산출
+1. **Financial Data Extraction** — Retrieve consolidated financial reports from DART using `dart_fss`
+2. **Ratio Analysis** — Compute profitability, liquidity, leverage, and efficiency ratios
+3. **Estimated Financial Statements** — Project future income statements and balance sheets
+4. **RIM Valuation** — Estimate present equity value using the Ohlson Residual Income Model
+5. **EVA Valuation** — Estimate present equity value using the Economic Value Added model
 
-## 사용 기술
+## 🛠 Tech Stack
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
 ![Excel](https://img.shields.io/badge/Excel-217346?style=flat&logo=microsoft-excel&logoColor=white)
+
+## 📦 Libraries
+
+| Library | Usage |
+|---|---|
+| `dart_fss` | Fetch financial disclosures from DART (Korea's public filing system) |
+| `OpenDartReader` | Alternative DART API reader |
+| `pandas` | Data manipulation and Excel I/O |
+| `numpy` | Numerical computation |
