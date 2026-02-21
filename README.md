@@ -2,7 +2,7 @@
 
 LG에너지솔루션의 재무제표를 분석하고 기업가치를 추정하는 프로젝트입니다.
 
-## 📁 구조
+## 구조
 
 ```
 Financial-statement-analysis-of-LG-energy-solution/
@@ -21,7 +21,7 @@ Financial-statement-analysis-of-LG-energy-solution/
     └── RIM_EVA_계산.py
 ```
 
-## 📌 분석 단계
+## 분석 단계
 
 1. **재무제표 수집** — DART `dart_fss` 라이브러리로 공시 데이터 추출
 2. **비율 분석** — 수익성, 유동성, 레버리지, 효율성 지표 계산
@@ -29,7 +29,7 @@ Financial-statement-analysis-of-LG-energy-solution/
 4. **기업가치 평가 (RIM)** — Ohlson 잔여이익 모델 기반 주주가치 산출
 5. **기업가치 평가 (EVA)** — 경제적 부가가치 모델 기반 주주가치 산출
 
-## 🛠 사용 기술
+## 사용 기술
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
